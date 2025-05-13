@@ -1,0 +1,29 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App component testing > Renders /shop outlet content 1`] = `
+<DocumentFragment>
+  <nav>
+    Nav here
+  </nav>
+  <h1>
+    Shop goes here
+  </h1>
+  <footer>
+    Footer here
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`App component testing > Renders default outlet content 1`] = `
+<DocumentFragment>
+  <nav>
+    Nav here
+  </nav>
+  <h1>
+    Home goes here
+  </h1>
+  <footer>
+    Footer here
+  </footer>
+</DocumentFragment>
+`;
