@@ -1,0 +1,18 @@
+.reviews {
+  display: flex;
+  background-color: #005f73;
+  width: 100%;
+  gap: 8px;
+}
+
+.reviewsEntry {
+  display: flex;
+  background-color: aliceblue;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviewsEntry > img {
+  width: 100px;
+  border-radius: 100ch;
+}
