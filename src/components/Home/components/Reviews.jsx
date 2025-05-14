@@ -1,34 +1,10 @@
-import { useEffect, useState } from "react";
+import useFetch from "../../../../hooks/useFetch";
 import styles from "./Reviews.module.css";
 
 export default function Reviews() {
-  const FetchLocalReviews = () => {
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-      fetch("../../../data/Home/reviews.json")
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to fetch reviews");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          setData(data);
-          setLoading(false);
-        })
-        .catch((err) => {
-          setError(err.message);
-          setLoading(false);
-        });
-    }, []);
-
-    return { error, loading, data };
-  };
-
-  const { error, loading, data } = FetchLocalReviews();
+  const { error, loading, data } = useFetch(
+    "../../../../data/Home/reviews.json"
+  );
 
   function scoreToEmoji(score) {
     return "⭐️".repeat(score);
