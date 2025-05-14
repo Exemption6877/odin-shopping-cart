@@ -30,7 +30,6 @@ export default function Home() {
   };
 
   const { error, loading, data } = FetchLocalReviews();
-  console.log(data);
 
   return (
     <div className={styles.home}>
