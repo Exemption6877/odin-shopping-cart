@@ -30,6 +30,10 @@ export default function Reviews() {
 
   const { error, loading, data } = FetchLocalReviews();
 
+  function scoreToEmoji(score) {
+    return "⭐️".repeat(score);
+  }
+
   if (loading) return <p>Loading...</p>;
 
   if (error) return <p>{error}</p>;
@@ -40,9 +44,9 @@ export default function Reviews() {
         {data.map((person) => (
           <div className={styles.reviewsEntry} key={person.id}>
             <img src={person.photo} alt={`${person.name} photo`} />
-            <p>{person.review}</p>
-            <p>{person.score}</p>
             <p>{person.name}</p>
+            <p>{scoreToEmoji(person.score)}</p>
+            <p>{person.review}</p>
           </div>
         ))}
       </div>
