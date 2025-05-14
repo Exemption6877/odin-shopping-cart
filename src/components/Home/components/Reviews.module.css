@@ -3,13 +3,20 @@
   background-color: #005f73;
   width: 100%;
   gap: 8px;
+  padding: 16px 0;
+  justify-content: center;
 }
 
 .reviewsEntry {
   display: flex;
+  padding: 16px;
   background-color: aliceblue;
   flex-direction: column;
   align-items: center;
+  border-radius: 2ch;
+  min-height: 250px;
+  max-width: 300px;
+  text-align: center;
 }
 
 .reviewsEntry > img {
