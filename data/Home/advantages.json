@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "High-Quality Fabrics",
+    "description": "We use only the finest materials to ensure comfort, durability, and style in every piece of clothing.",
+    "icon": "./icons/home/highquality.svg"
+  },
+  {
+    "id": 2,
+    "title": "Exclusive Styles",
+    "description": "Our collections are handpicked to offer unique and trendy designs you won't find anywhere else.",
+    "icon": "./icons/home/clothing.svg"
+  },
+  {
+    "id": 3,
+    "title": "Affordable Prices",
+    "description": "Quality doesn't have to be expensive - we offer stylish clothes at prices that fit your budget.",
+    "icon": "./icons/home/pricing.svg"
+  },
+  {
+    "id": 4,
+    "title": "Hassle-Free Returns",
+    "description": "Unsatisfied with your purchase? Our easy return policy ensures a smooth and stress-free shopping experience.",
+    "icon": "./icons/home/redo.svg"
+  }
+]

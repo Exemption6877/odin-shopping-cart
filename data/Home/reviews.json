@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
+    "name": "Sarah M.",
     "score": 5,
     "review": "Great quality and fast shipping. I'll definitely buy again!",
-    "name": "Sarah M.",
     "photo": "./images/home/sarah.jpg"
   },
   {
     "id": 2,
+    "name": "James L.",
     "score": 4,
     "review": "The t-shirts fit perfectly and feel super comfortable.",
-    "name": "James L.",
     "photo": "./images/home/james.jpg"
   },
   {
     "id": 3,
+    "name": "Emily T.",
     "score": 5,
     "review": "Excellent customer service. They handled my exchange fast.",
-    "name": "Emily T.",
     "photo": "./images/home/emily.jpg"
   }
 ]
