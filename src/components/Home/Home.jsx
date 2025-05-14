@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reviews from "./components/Reviews";
+import Advantages from "./components/Advantages";
 import styles from "./Home.module.css";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
         </div>
       </div>
       <Reviews />
-      <div className="points"></div>
+      <Advantages />
       <div className="leave-review"></div>
     </div>
   );

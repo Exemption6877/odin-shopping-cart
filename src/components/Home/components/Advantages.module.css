@@ -1,0 +1,19 @@
+.advantages {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.advantagesEntry {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+}
