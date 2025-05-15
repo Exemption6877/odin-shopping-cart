@@ -58,3 +58,9 @@
 .wrapper > a > img {
   width: 50px;
 }
+
+@media (max-width: 1080px) {
+  .pageLinks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

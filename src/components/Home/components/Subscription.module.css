@@ -48,3 +48,10 @@
 .email {
   background-color: aquamarine;
 }
+
+@media (max-width: 500px) {
+  .subscription {
+    border-radius: 0;
+    width: 100%;
+  }
+}

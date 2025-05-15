@@ -4,7 +4,7 @@
   align-self: center;
   margin-top: var(--component-gap);
   padding-top: 400px;
-  width: 50vw;
+  width: 75vw;
   background-image: var(--home-bg-image);
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,9 +28,10 @@
   flex-direction: column;
   background-color: var(--secondary-color);
   gap: var(--text-gap);
-  position: relative;
-  left: 50px;
-  bottom: 200px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 150px;
   width: fit-content;
   justify-content: center;
@@ -42,4 +43,10 @@
   color: var(--secondary-color);
   font-weight: 600;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1080px) {
+  .imgBg {
+    width: 100vw;
+  }
 }
