@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: var(--text-size-s);
+}
+
 a,
 button,
 input[type="submit"] {
