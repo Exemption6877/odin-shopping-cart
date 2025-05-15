@@ -1,0 +1,33 @@
+.navbar {
+  display: inline-flex;
+  background-color: black;
+  padding: 16px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-flex;
+  width: 100%;
+}
+
+.logo > h2 {
+  color: white;
+}
+
+.links {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.links > a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.links > a:first-child {
+  padding-right: 8px;
+  border-right: 1px solid white;
+}

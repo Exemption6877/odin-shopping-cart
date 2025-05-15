@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      
+
       <div className={styles.copyright}>
         <p>
           Copyright
