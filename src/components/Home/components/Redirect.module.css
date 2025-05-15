@@ -1,25 +1,45 @@
-@import "../../../styles/variables.css";
+@import url(../../../styles/variables.css);
 
 .imgBg {
-  display: flex;
   align-self: center;
+  margin-top: var(--component-gap);
+  padding-top: 400px;
+  width: 50vw;
   background-image: var(--home-bg-image);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 500px;
-  align-items: center;
   background-attachment: fixed;
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+.imgBg,
+.block {
+  display: flex;
+  align-items: center;
+}
+
+.block,
+.block > a {
+  border-radius: var(--round-box);
+  padding: var(--padding-s);
 }
 
 .block {
-  display: inline-flex;
   flex-direction: column;
-  background-color: #ffffff;
-  padding: 64px;
-  align-items: center;
-  border-radius: 2ch;
+  background-color: var(--secondary-color);
+  gap: var(--text-gap);
   position: relative;
-  top: 0;
   left: 50px;
+  bottom: 200px;
+  height: 150px;
+  width: fit-content;
+  justify-content: center;
+  text-align: center;
+}
+
+.block > a {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-weight: 600;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.4);
 }

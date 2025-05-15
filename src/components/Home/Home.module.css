@@ -1,8 +1,8 @@
-@import "../../styles/variables.css";
+@import url(../../styles/variables.css);
 
 .home {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 32px;
+  gap: var(--component-gap);
 }
