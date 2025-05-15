@@ -1,5 +1,6 @@
 import styles from "./Shop.module.css";
 import useFetch from "../../../hooks/useFetch";
+import Products from "./components/Products";
 
 export default function Shop() {
   const { error, loading, data } = useFetch(
@@ -9,7 +10,9 @@ export default function Shop() {
   console.log(data);
   return (
     <div className={styles.shop}>
-      <h1>Shop goes here</h1>
+      {loading && <p>{loading}</p>}
+      {error && <p>{error}</p>}
+      {data && <Products items={data} />}
     </div>
   );
 }

@@ -1,4 +1,9 @@
+@import url(../../styles/variables.css);
+
 .shop {
-  flex-grow: 1;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   display: flex;
+  padding: var(--component-padding);
 }
