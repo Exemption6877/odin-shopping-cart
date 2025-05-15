@@ -18,7 +18,7 @@ export default function Reviews() {
         data.map((person) => (
           <div className={styles.reviewsEntry} key={person.id}>
             <img src={person.photo} alt={`${person.name} photo`} />
-            <p>{person.name}</p>
+            <h4>{person.name}</h4>
             <p>{scoreToEmoji(person.score)}</p>
             <p>{person.review}</p>
           </div>

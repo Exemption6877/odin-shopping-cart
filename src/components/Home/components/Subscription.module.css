@@ -1,27 +1,23 @@
 @import url(../../../styles/variables.css);
 
-.subscription,
-.formSubscription,
-.block {
-  display: flex;
-}
-
 .subscription {
+  display: flex;
   flex-direction: column;
-  background-color: var(--main-color);
   align-self: center;
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
   padding: var(--component-padding);
   margin-bottom: var(--component-gap);
+  gap: var(--text-gap);
+  background-color: var(--main-color);
   color: var(--secondary-color);
   border-radius: var(--round-box);
-  gap: var(--text-gap);
   box-shadow: 0 8px 4px rgba(0, 0, 0, 0.3);
 }
 
 .formSubscription {
+  display: flex;
   flex-wrap: wrap;
   gap: var(--text-gap);
   align-items: center;
@@ -31,11 +27,18 @@
 .formSubscription > input[type="email"] {
   border-radius: var(--round-box);
   padding: 0.5rem;
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+.formSubscription > input[type="email"]:focus {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 0;
 }
 
 .formSubscription > input[type="submit"] {
-  padding: 0.3rem;
   width: 150px;
+  padding: 0.3rem;
   background-color: var(--secondary-color);
   border: none;
   border-radius: var(--round-box);

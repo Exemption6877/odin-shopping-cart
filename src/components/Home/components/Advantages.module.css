@@ -23,7 +23,6 @@
   min-height: 210px;
   border: 1px solid var(--main-color);
   border-radius: var(--round-box);
-  text-align: center;
   align-items: center;
   gap: var(--text-gap);
   color: var(--secondary-color);
@@ -31,13 +30,14 @@
 }
 
 .advantagesEntry > p {
+  padding-left: 1.5rem;
   font-weight: 500;
 }
 
 .title {
   justify-content: flex-start;
   align-items: center;
-  width: fit-content;
+  width: 100%;
   gap: var(--text-gap);
 }
 

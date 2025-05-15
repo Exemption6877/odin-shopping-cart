@@ -36,7 +36,12 @@ export default function Subscription() {
       <div className={styles.subscription}>
         <h2>Subscribe to our weekly letters!</h2>
         <form className={styles.formSubscription}>
-          <input type="email" onChange={handleTyping} value={input}></input>
+          <input
+            type="email"
+            onChange={handleTyping}
+            value={input}
+            placeholder="example@mail.com"
+          ></input>
           <input type="submit" value="submit" onClick={handleClick} />
         </form>
       </div>
