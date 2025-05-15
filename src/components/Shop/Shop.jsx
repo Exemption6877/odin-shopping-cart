@@ -1,6 +1,12 @@
 import styles from "./Shop.module.css";
+import useFetch from "../../../hooks/useFetch";
 
 export default function Shop() {
+  const { error, loading, data } = useFetch(
+    "https://api.escuelajs.co/api/v1/products/?categoryId=1&offset=0&limit=50"
+  );
+
+  console.log(data);
   return (
     <div className={styles.shop}>
       <h1>Shop goes here</h1>
