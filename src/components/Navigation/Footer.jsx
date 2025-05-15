@@ -5,7 +5,7 @@ export default function Footer() {
 
   // Links are nonfunctional and serve esthetical purpose
   return (
-    <footer>
+    <footer className={styles.footer}>
       <div className={styles.main}>
         <div className={styles.pageLinks}>
           <a href="">Blog</a>
@@ -29,10 +29,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       <div className={styles.copyright}>
         <p>
           Copyright
-          <span> {CURRENT_YEAR} </span>
+          <span> {CURRENT_YEAR}. </span>
           All Rights Reserved.
         </p>
       </div>

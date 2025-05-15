@@ -1,28 +1,30 @@
+@import url(../../styles/variables.css);
+
 .main {
   display: flex;
-  background-color: black;
-  border-bottom: 2px solid white;
+  width: 100%;
   align-items: center;
-  flex-direction: row;
   justify-content: center;
-  padding: 8px 0;
+  background-color: var(--main-color);
+  border-bottom: 1px solid var(--secondary-color);
+  padding: var(--padding-s);
+  gap: 5rem;
 }
 
 .pageLinks {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 2px;
-  width: 60%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  row-gap: 0.5rem;
 }
 
 .pageLinks > a {
-  color: white;
-  text-decoration: none;
+  color: var(--secondary-color);
 }
 
 .copyright {
   background-color: black;
-  padding: 8px;
+  padding: var(--padding-s);
 }
 
 .copyright > p {
@@ -36,23 +38,23 @@
   align-items: center;
 }
 
-.wrapper > a {
-  display: flex;
-  background-color: white;
-  border-radius: 1ch;
-  gap: 8px;
-}
-
-.wrapper > a > img {
-  width: 50px;
+.media > h3 {
+  color: var(--secondary-color);
 }
 
 .wrapper {
   display: flex;
-  flex-direction: row;
-  gap: 8px;
+  gap: var(--text-gap);
 }
 
-.media > h3 {
-  color: white;
+.wrapper > a {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 1ch;
+  gap: var(--text-gap);
+}
+
+.wrapper > a > img {
+  width: 50px;
 }
