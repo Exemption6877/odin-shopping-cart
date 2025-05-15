@@ -10,14 +10,12 @@ export default function Reviews() {
     return "⭐️".repeat(score);
   }
 
-  if (loading) return <p>Loading...</p>;
-
-  if (error) return <p>{error}</p>;
-
   return (
-    data && (
-      <div className={styles.reviews}>
-        {data.map((person) => (
+    <div className={styles.reviews}>
+      {loading ? <p>Loading...</p> : null}
+      {error ? <p>{error}</p> : null}
+      {data &&
+        data.map((person) => (
           <div className={styles.reviewsEntry} key={person.id}>
             <img src={person.photo} alt={`${person.name} photo`} />
             <p>{person.name}</p>
@@ -25,7 +23,6 @@ export default function Reviews() {
             <p>{person.review}</p>
           </div>
         ))}
-      </div>
-    )
+    </div>
   );
 }
