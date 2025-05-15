@@ -1,33 +1,45 @@
+@import url(../../styles/variables.css);
+
 .navbar {
   display: inline-flex;
-  background-color: black;
-  padding: 16px;
-  justify-content: space-between;
+  background-color: var(--main-color);
+  padding: var(--nav-padding);
+  align-items: center;
+  justify-content: space-around;
+
+  /* position: fixed;
+  width: 100%;
+  z-index: 1; */
 }
 
 .logo {
   display: inline-flex;
-  width: 100%;
+  width: fit-content;
 }
 
-.logo > h2 {
-  color: white;
+.logo > img {
+  width: var(--text-size-l);
+}
+
+.logo > h2,
+.links > a {
+  color: var(--secondary-color);
+}
+
+.logo > h2,
+.links > a {
+  color: var(--secondary-color);
+  font-size: var(--text-size-l);
 }
 
 .links {
   display: inline-flex;
-  gap: 8px;
   align-items: center;
-}
-
-.links > a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 500;
+  gap: var(--text-gap);
+  width: fit-content;
 }
 
 .links > a:first-child {
-  padding-right: 8px;
-  border-right: 1px solid white;
+  padding-right: var(--text-gap);
+  border-right: 2px solid var(--secondary-color);
 }
