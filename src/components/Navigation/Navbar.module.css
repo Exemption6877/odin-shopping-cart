@@ -2,6 +2,7 @@
 
 .navbar {
   display: inline-flex;
+  width: 100%;
   background-color: var(--main-color);
   padding: var(--nav-padding);
   align-items: center;

@@ -9,12 +9,9 @@ html,
 body {
   font-family: var(--font-main);
   background-color: var(--secondary-color);
-  height: 100%;
-}
-
-body {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 a {
