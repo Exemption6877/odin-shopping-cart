@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "./Navigation/Footer";
 import styles from "./App.module.css";
 
 function App() {
@@ -6,10 +7,8 @@ function App() {
   return (
     <div className={styles.app}>
       <nav className={styles.nav}>Nav here</nav>
-      <main className={styles.main}>
-        <Outlet />
-      </main>
-      <footer className={styles.footer}>Footer here</footer>
+      <Outlet />
+      <Footer />
     </div>
   );
 }
