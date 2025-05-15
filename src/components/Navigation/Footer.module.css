@@ -35,7 +35,8 @@
 .media {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  gap: var(--text-gap);
 }
 
 .media > h3 {
@@ -44,7 +45,7 @@
 
 .wrapper {
   display: flex;
-  gap: var(--text-gap);
+  gap: var(--padding-s);
 }
 
 .wrapper > a {
@@ -52,11 +53,10 @@
   align-items: center;
   background-color: var(--secondary-color);
   border-radius: 1ch;
-  gap: var(--text-gap);
 }
 
 .wrapper > a > img {
-  width: 50px;
+  width: 45px;
 }
 
 @media (max-width: 1080px) {
