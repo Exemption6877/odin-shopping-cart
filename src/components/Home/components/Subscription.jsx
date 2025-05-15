@@ -32,14 +32,13 @@ export default function Subscription() {
           onClick={handleClick}
         />
       ) : null}
+
       <div className={styles.subscription}>
-        <div className={styles.block}>
-          <h2>Subscribe to our weekly letters!</h2>
-          <form className={styles.formSubscription}>
-            <input type="email" onChange={handleTyping} value={input}></input>
-            <input type="submit" value="submit" onClick={handleClick} />
-          </form>
-        </div>
+        <h2>Subscribe to our weekly letters!</h2>
+        <form className={styles.formSubscription}>
+          <input type="email" onChange={handleTyping} value={input}></input>
+          <input type="submit" value="submit" onClick={handleClick} />
+        </form>
       </div>
     </>
   );

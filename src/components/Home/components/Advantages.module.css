@@ -18,7 +18,7 @@
   flex-direction: column;
   background-color: var(--main-color);
   padding: var(--padding-s);
-  width: 300px;
+  width: 320px;
   max-height: 300px;
   min-height: 210px;
   border: 1px solid var(--main-color);
@@ -28,6 +28,10 @@
   gap: var(--text-gap);
   color: var(--secondary-color);
   box-shadow: 0 8px 4px rgba(0, 0, 0, 0.3);
+}
+
+.advantagesEntry > p {
+  font-weight: 500;
 }
 
 .title {

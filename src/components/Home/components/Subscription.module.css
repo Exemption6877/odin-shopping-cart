@@ -1,25 +1,45 @@
-.subscription {
+@import url(../../../styles/variables.css);
+
+.subscription,
+.formSubscription,
+.block {
   display: flex;
+}
+
+.subscription {
   flex-direction: column;
-  background-color: white;
-  width: 100%;
+  background-color: var(--main-color);
+  align-self: center;
   align-items: center;
-  padding: 32px 0;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: var(--component-padding);
+  margin-bottom: var(--component-gap);
+  color: var(--secondary-color);
+  border-radius: var(--round-box);
+  gap: var(--text-gap);
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.3);
 }
 
 .formSubscription {
-  display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: var(--text-gap);
   align-items: center;
+  justify-content: center;
 }
 
-.block {
-  display: flex;
-  flex-direction: column;
-  background-color: #8888a5;
-  padding: 64px;
-  align-items: center;
-  gap: 32px;
+.formSubscription > input[type="email"] {
+  border-radius: var(--round-box);
+  padding: 0.5rem;
+}
+
+.formSubscription > input[type="submit"] {
+  padding: 0.3rem;
+  width: 150px;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: var(--round-box);
+  box-shadow: 8px 5px 0 rgba(255, 255, 255, 0.4);
 }
 
 .email {
