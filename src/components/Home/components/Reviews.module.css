@@ -1,7 +1,11 @@
 @import url(../../../styles/variables.css);
 
-.reviews {
+.reviews,
+.reviewsEntry {
   display: flex;
+}
+
+.reviews {
   flex-wrap: wrap;
   background-color: var(--accent-color);
   gap: var(--component-padding);
@@ -11,7 +15,6 @@
 }
 
 .reviewsEntry {
-  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--secondary-color);
@@ -25,7 +28,7 @@
 
 .reviewsEntry > img {
   width: 100px;
-  border-radius: var(--round);
   box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.7);
   border: 2px solid var(--secondary-color);
+  border-radius: var(--round);
 }

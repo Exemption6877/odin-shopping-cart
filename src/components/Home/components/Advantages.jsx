@@ -6,23 +6,20 @@ export default function Advantages() {
     "../../../../data/Home/advantages.json"
   );
 
-  if (loading) return <p>Loading...</p>;
-
-  if (error) return <p>{error}</p>;
-
   return (
-    data && (
-      <div className={styles.advantages}>
-        {data.map((entry) => (
+    <div className={styles.advantages}>
+      {loading ? <p>Loading...</p> : null}
+      {error ? <p>{error}</p> : null}
+      {data &&
+        data.map((entry) => (
           <div className={styles.advantagesEntry} key={entry.id}>
             <div className={styles.title}>
               <img src={entry.icon} alt="advantage icon" />
-              <p>{entry.title}</p>
+              <h3>{entry.title}</h3>
             </div>
             <p>{entry.description}</p>
           </div>
         ))}
-      </div>
-    )
+    </div>
   );
 }

@@ -1,19 +1,45 @@
-.advantages {
+@import url(../../../styles/variables.css);
+
+.advantages,
+.advantagesEntry,
+.title {
   display: flex;
-  flex-direction: row;
+}
+
+.advantages {
   width: 100%;
-  justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: var(--component-gap);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .advantagesEntry {
-  display: flex;
   flex-direction: column;
-  background-color: bisque;
+  background-color: var(--main-color);
+  padding: var(--padding-s);
+  width: 300px;
+  max-height: 300px;
+  min-height: 210px;
+  border: 1px solid var(--main-color);
+  border-radius: var(--round-box);
+  text-align: center;
+  align-items: center;
+  gap: var(--text-gap);
+  color: var(--secondary-color);
+  box-shadow: 0 8px 4px rgba(0, 0, 0, 0.3);
 }
 
 .title {
-  display: flex;
-  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  gap: var(--text-gap);
+}
+
+.title > img {
+  display: block;
+  background-color: var(--secondary-color);
+  border-radius: var(--round-box);
+  width: 55px;
 }
