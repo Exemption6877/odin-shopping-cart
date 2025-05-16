@@ -2,6 +2,7 @@ import styles from "./Shop.module.css";
 import useFetch from "../../../hooks/useFetch";
 import Products from "./components/Products";
 import CartShortcut from "./components/CartShortcut";
+import { Outlet } from "react-router-dom";
 
 export default function Shop() {
   const { error, loading, data } = useFetch(

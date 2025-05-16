@@ -5,7 +5,7 @@ export default function CartShortcut() {
   const icon = "./icons/shop/cart.svg";
 
   return (
-    <Link to="/" className={styles.mainCircle}>
+    <Link to="/cart" className={styles.mainCircle}>
       <img src={icon} alt="cart icon" />
       <div className={styles.redCircle}>
         <p>1</p>

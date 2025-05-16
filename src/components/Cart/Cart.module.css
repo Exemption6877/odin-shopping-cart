@@ -1,0 +1,9 @@
+@import url(../../styles/variables.css);
+
+.cart {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: var(--component-padding);
+}
