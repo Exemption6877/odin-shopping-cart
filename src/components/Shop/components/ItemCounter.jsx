@@ -17,8 +17,6 @@ export default function ItemCounter() {
       const output = amount + 1;
       setAmount(formatNumber(output));
     }
-
-    console.log(amount);
   }
 
   function formatNumber(num) {

@@ -1,0 +1,41 @@
+@import url(../../../styles/variables.css);
+
+.mainCircle,
+.redCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--round);
+}
+
+.mainCircle {
+  position: fixed;
+  right: 5%;
+  bottom: 3%;
+  flex-direction: column;
+  aspect-ratio: 1 / 1;
+  width: 80px;
+  background-color: var(--main-color);
+}
+
+.mainCircle > img {
+  width: 50px;
+}
+
+.redCircle {
+  position: absolute;
+  top: 63px;
+  left: 10px;
+  width: fit-content;
+  min-width: 20px;
+  max-width: 60px;
+  height: 20px;
+  padding: 4px;
+  background-color: #ff0000;
+  overflow: hidden;
+}
+
+.redCircle > p {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
