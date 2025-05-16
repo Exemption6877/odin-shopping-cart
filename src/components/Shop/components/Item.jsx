@@ -1,4 +1,5 @@
 import styles from "./Item.module.css";
+import ItemCounter from "./ItemCounter";
 
 export default function Item({ item }) {
   return (
@@ -8,6 +9,7 @@ export default function Item({ item }) {
         <h4>{item.title}</h4>
         <h4>${item.price}</h4>
       </div>
+      <ItemCounter />
     </div>
   );
 }

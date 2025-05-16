@@ -1,0 +1,12 @@
+@import url(../../../styles/variables.css);
+
+.counter {
+  display: flex;
+  gap: var(--text-gap);
+  align-items: center;
+}
+
+.number {
+  min-width: 1rem;
+  max-width: fit-content;
+}
