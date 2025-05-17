@@ -35,6 +35,15 @@ export default function Shop() {
 
   console.log(data);
 
+  function nulify() {
+    setProducts(
+      data.map((item) => ({
+        ...item,
+        amount: 0,
+      }))
+    );
+  }
+
   function totalAmount(items) {
     return items.reduce((acc, item) => acc + item.amount, 0);
   }
@@ -43,7 +52,17 @@ export default function Shop() {
     <div className={styles.shop}>
       {loading && <p>{loading}</p>}
       {error && <p>{error}</p>}
-      {buy && <Modal message="Bought!" onClick={() => setBuy(false)} />}
+      {buy && (
+        <Modal
+          message={`Thank you for your purchase! Your total is: $${totalAmount(
+            products
+          )}. Please  check your email!`}
+          onClick={() => {
+            setBuy(false);
+            nulify();
+          }}
+        />
+      )}
 
       {data && <Products products={products} setProducts={setProducts} />}
       {showCart ? (
