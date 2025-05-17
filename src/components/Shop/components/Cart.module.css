@@ -1,0 +1,35 @@
+@import url(../../../styles/variables.css);
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0000005b;
+  z-index: 1000;
+}
+
+.cart {
+  display: flex;
+  position: fixed;
+  background-color: var(--main-color);
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 50%;
+  z-index: 1001;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.item {
+  display: inline-flex;
+  background-color: var(--secondary-color);
+  height: 5%;
+  width: 100%;
+}

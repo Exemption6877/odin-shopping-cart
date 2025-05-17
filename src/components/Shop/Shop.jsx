@@ -4,6 +4,7 @@ import Products from "./components/Products";
 import CartShortcut from "./components/CartShortcut";
 import { useState } from "react";
 import { useEffect } from "react";
+import Cart from "./components/Cart";
 
 export default function Shop() {
   const { error, loading, data } = useFetch(
@@ -28,7 +29,8 @@ export default function Shop() {
       {loading && <p>{loading}</p>}
       {error && <p>{error}</p>}
       {data && <Products products={products} setProducts={setProducts} />}
-      <CartShortcut amount={totalAmount(products)} />
+      {showCart ? <Cart selected={products} setShowCart={setShowCart} /> : null}
+      <CartShortcut setShowCart={setShowCart} amount={totalAmount(products)} />
     </div>
   );
 }
