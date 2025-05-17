@@ -28,7 +28,7 @@ export default function Subscription() {
       {showModal ? (
         <Modal
           className={styles.email}
-          message={"Test message"}
+          message={"Thank you for subscribing! Please check your inbox!"}
           onClick={handleClick}
         />
       ) : null}

@@ -1,7 +1,7 @@
 .modal {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: fit-content;
   width: 500px;
   position: fixed;
   top: 50%;
@@ -33,9 +33,12 @@
   width: 35px;
   height: 35px;
   border-radius: var(--round);
-  margin: var(--padding-s);
+  margin-top: var(--padding-s);
+  margin-right: var(--padding-s);
 }
 
 .modal > p {
   margin: var(--padding-s);
+  font-size: var(--text-size-m);
+  font-weight: bold;
 }
