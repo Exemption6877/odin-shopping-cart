@@ -1,5 +1,5 @@
 :root {
-  --home-bg-image: url("./images/home/main.jpg");
+  --home-bg-image: url(/images/home/main.jpg);
   --main-color: #111111;
   --secondary-color: #f0f0f0;
   --accent-color: #005f73;
