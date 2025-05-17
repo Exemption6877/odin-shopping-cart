@@ -4,9 +4,40 @@
   display: flex;
   gap: var(--text-gap);
   align-items: center;
+  background-color: var(--main-color);
+  padding: var(--padding-s);
+  width: 90%;
+  border-radius: var(--round-box);
+  justify-self: end;
+  justify-content: center;
+  margin-top: auto;
 }
 
 .number {
   min-width: 1rem;
   max-width: fit-content;
+}
+
+.minus,
+.plus {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  color: var(--main-color);
+  border-radius: var(--round);
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.counter > input {
+  background-color: var(--secondary-color);
+  outline: none;
+  border: none;
+  text-align: center;
+  width: 30%;
 }

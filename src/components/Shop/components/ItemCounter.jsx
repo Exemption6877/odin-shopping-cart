@@ -38,7 +38,7 @@ export default function ItemCounter({ amount, setAmount }) {
 
   return (
     <form className={styles.counter}>
-      <button value="-" onClick={handleClick}>
+      <button className={styles.minus} value="-" onClick={handleClick}>
         -
       </button>
       <input
@@ -49,7 +49,7 @@ export default function ItemCounter({ amount, setAmount }) {
         value={amount}
         onChange={handleTyping}
       />
-      <button value="+" onClick={handleClick}>
+      <button className={styles.plus} value="+" onClick={handleClick}>
         +
       </button>
     </form>

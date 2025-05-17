@@ -48,13 +48,17 @@ export default function Shop() {
     return items.reduce((acc, item) => acc + item.amount, 0);
   }
 
+  function totalPrice(items) {
+    return items.reduce((acc, item) => acc + item.amount * item.price, 0);
+  }
+
   return (
     <div className={styles.shop}>
       {loading && <p>{loading}</p>}
       {error && <p>{error}</p>}
       {buy && (
         <Modal
-          message={`Thank you for your purchase! Your total is: $${totalAmount(
+          message={`Thank you for your purchase! Your total is: $${totalPrice(
             products
           )}. Please  check your email!`}
           onClick={() => {
