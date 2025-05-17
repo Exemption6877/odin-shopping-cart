@@ -1,6 +1,6 @@
 import styles from "./Cart.module.css";
 
-export default function Cart({ selected, setShowCart }) {
+export default function Cart({ selected, setShowCart, setBuy }) {
   const back_svg = "./icons/shop/back.svg";
 
   const totalValue = selected.reduce(
@@ -38,7 +38,15 @@ export default function Cart({ selected, setShowCart }) {
             <p>No entries yet!</p>
           )}
           <h3 className={styles.total}>Total: ${totalValue}</h3>
-          <button className={styles.submit}>Submit!</button>
+          <button
+            className={styles.submit}
+            onClick={() => {
+              setShowCart(false);
+              setBuy(true);
+            }}
+          >
+            Submit!
+          </button>
         </div>
       </div>
     </>

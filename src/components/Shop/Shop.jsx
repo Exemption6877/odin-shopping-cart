@@ -5,6 +5,7 @@ import CartShortcut from "./components/CartShortcut";
 import { useState } from "react";
 import { useEffect } from "react";
 import Cart from "./components/Cart";
+import Modal from "../Modal";
 
 export default function Shop() {
   const { error, loading, data } = useFetch(
@@ -13,6 +14,8 @@ export default function Shop() {
 
   const [products, setProducts] = useState([]);
   const [showCart, setShowCart] = useState(false);
+  const [buy, setBuy] = useState(false);
+
   const placeholder = "./icons/shop/placeholder.svg";
 
   useEffect(() => {
@@ -40,8 +43,12 @@ export default function Shop() {
     <div className={styles.shop}>
       {loading && <p>{loading}</p>}
       {error && <p>{error}</p>}
+      {buy && <Modal message="Bought!" onClick={() => setBuy(false)} />}
+
       {data && <Products products={products} setProducts={setProducts} />}
-      {showCart ? <Cart selected={products} setShowCart={setShowCart} /> : null}
+      {showCart ? (
+        <Cart selected={products} setShowCart={setShowCart} setBuy={setBuy} />
+      ) : null}
       <CartShortcut setShowCart={setShowCart} amount={totalAmount(products)} />
     </div>
   );
