@@ -11,6 +11,7 @@ export default function Shop() {
   );
 
   const [products, setProducts] = useState([]);
+  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     if (data && data.length > 0) {
@@ -18,12 +19,16 @@ export default function Shop() {
     }
   }, [data]);
 
+  function totalAmount(items) {
+    return items.reduce((acc, item) => acc + item.amount, 0);
+  }
+
   return (
     <div className={styles.shop}>
       {loading && <p>{loading}</p>}
       {error && <p>{error}</p>}
       {data && <Products products={products} setProducts={setProducts} />}
-      <CartShortcut />
+      <CartShortcut amount={totalAmount(products)} />
     </div>
   );
 }
