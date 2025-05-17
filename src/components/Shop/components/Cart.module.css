@@ -12,6 +12,7 @@
 
 .cart {
   display: flex;
+  flex-direction: column;
   position: fixed;
   background-color: var(--main-color);
   height: 100%;
@@ -19,17 +20,73 @@
   right: 0;
   width: 50%;
   z-index: 1001;
+  gap: var(--text-gap);
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .grid {
   display: flex;
   flex-direction: column;
   height: 100%;
+  gap: var(--text-gap);
+  align-items: center;
+}
+
+.grid > h2 {
+  color: var(--secondary-color);
+  align-self: center;
 }
 
 .item {
-  display: inline-flex;
+  display: flex;
   background-color: var(--secondary-color);
-  height: 5%;
   width: 100%;
+  align-items: center;
+  padding: var(--padding-s);
+  gap: var(--text-gap);
+  border-radius: var(--round-box);
+}
+
+.item > p {
+  width: 200px;
+}
+
+.item > img {
+  border-radius: var(--round-box);
+  width: 100px;
+}
+
+.back {
+  display: flex;
+  background-color: var(--secondary-color);
+  height: 50px;
+  width: 50px;
+  align-self: flex-end;
+  border: none;
+  border-radius: var(--round);
+  margin: var(--padding-s);
+  align-items: center;
+  justify-content: center;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: var(--round-box);
+  padding: 0.5rem 1.5rem;
+}
+
+.purchaseDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.total {
+  color: var(--secondary-color);
 }
