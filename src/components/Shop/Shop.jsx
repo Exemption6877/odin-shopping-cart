@@ -13,12 +13,24 @@ export default function Shop() {
 
   const [products, setProducts] = useState([]);
   const [showCart, setShowCart] = useState(false);
+  const placeholder = "./icons/shop/placeholder.svg";
 
   useEffect(() => {
     if (data && data.length > 0) {
-      setProducts(data.map((item) => ({ ...item, amount: 0 })));
+      setProducts(
+        data.map((item) => ({
+          ...item,
+          images:
+            item.images[0] === "https://placehold.co/600x400"
+              ? placeholder
+              : item.images[0],
+          amount: 0,
+        }))
+      );
     }
   }, [data]);
+
+  console.log(data);
 
   function totalAmount(items) {
     return items.reduce((acc, item) => acc + item.amount, 0);
