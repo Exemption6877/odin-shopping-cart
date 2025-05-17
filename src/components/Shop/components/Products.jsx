@@ -1,11 +1,11 @@
 import Item from "./Item";
 import styles from "./Products.module.css";
 
-export default function Products({ items }) {
+export default function Products({ products, setProducts }) {
   return (
     <div className={styles.grid}>
-      {items.map((item) => (
-        <Item item={item} key={item.id} />
+      {products.map((item) => (
+        <Item product={item} setProducts={setProducts} key={item.id} />
       ))}
     </div>
   );

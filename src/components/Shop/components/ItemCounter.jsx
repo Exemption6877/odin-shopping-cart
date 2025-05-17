@@ -1,9 +1,6 @@
 import styles from "./ItemCounter.module.css";
-import { useState } from "react";
 
-export default function ItemCounter() {
-  const [amount, setAmount] = useState(0);
-
+export default function ItemCounter({ amount, setAmount }) {
   function handleClick(e) {
     e.preventDefault();
     const value = e.target.value;
