@@ -24,7 +24,7 @@ export default function Shop() {
         data.map((item) => ({
           ...item,
           images:
-            item.images[0] === "https://placehold.co/600x400"
+            item.images[0] === "https://placehold.co/600x400" || !item.images[0]
               ? placeholder
               : item.images[0],
           amount: 0,
