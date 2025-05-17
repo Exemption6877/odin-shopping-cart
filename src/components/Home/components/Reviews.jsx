@@ -2,9 +2,7 @@ import useFetch from "../../../../hooks/useFetch";
 import styles from "./Reviews.module.css";
 
 export default function Reviews() {
-  const { error, loading, data } = useFetch(
-    "../../../../data/Home/reviews.json"
-  );
+  const { error, loading, data } = useFetch("./data/Home/reviews.json");
 
   function scoreToEmoji(score) {
     return "⭐️".repeat(score);
