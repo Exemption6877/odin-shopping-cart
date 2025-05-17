@@ -1,4 +1,10 @@
 import styles from "./ItemCounter.module.css";
+import PropTypes from "prop-types";
+
+ItemCounter.PropTypes = {
+  amount: PropTypes.number.isRequired,
+  setAmount: PropTypes.func.isRequired,
+};
 
 export default function ItemCounter({ amount, setAmount }) {
   function handleClick(e) {

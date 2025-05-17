@@ -1,5 +1,17 @@
 import styles from "./Item.module.css";
 import ItemCounter from "./ItemCounter";
+import PropTypes from "prop-types";
+
+Item.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    images: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    amount: PropTypes.number.isRequired,
+  }).isRequired,
+  setProducts: PropTypes.func.isRequired,
+};
 
 export default function Item({ product, setProducts }) {
   function updateProducts(updatedAmount) {

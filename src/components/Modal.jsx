@@ -1,4 +1,11 @@
 import styles from "./Modal.module.css";
+import PropTypes from "prop-types";
+
+Modal.propTypes = {
+  message: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string,
+};
 
 export default function Modal({ className, onClick, message }) {
   const icon = "./icons/close.svg";

@@ -1,5 +1,10 @@
-import { Link } from "react-router-dom";
 import styles from "./CartShortcut.module.css";
+import PropTypes from "prop-types";
+
+CartShortcut.propTypes = {
+  amoun: PropTypes.number.isRequired,
+  setShowCart: PropTypes.func.isRequired,
+};
 
 export default function CartShortcut({ amount, setShowCart }) {
   const icon = "./icons/shop/cart.svg";

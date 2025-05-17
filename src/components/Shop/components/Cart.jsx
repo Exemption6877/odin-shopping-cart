@@ -1,4 +1,19 @@
 import styles from "./Cart.module.css";
+import PropTypes from "prop-types";
+
+Cart.propTypes = {
+  selected: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+      images: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      amount: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+  setShowCart: PropTypes.func.isRequired,
+  setBuy: PropTypes.func.isRequired,
+};
 
 export default function Cart({ selected, setShowCart, setBuy }) {
   const back_svg = "./icons/shop/back.svg";

@@ -33,8 +33,6 @@ export default function Shop() {
     }
   }, [data]);
 
-  console.log(data);
-
   function nulify() {
     setProducts(
       data.map((item) => ({
